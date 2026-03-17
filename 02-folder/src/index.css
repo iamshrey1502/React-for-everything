@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+  color: green;
+}
+.hero{
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid black;
+}
