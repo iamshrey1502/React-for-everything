@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html,body{
+  height: 100%;
+  widows: 100%;
+}
+
+h1{
+  color: green;
+}
+
+h2{
+  color: red;
+}
