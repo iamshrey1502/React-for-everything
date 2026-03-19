@@ -3,15 +3,13 @@ import Card from './components/Card'
 import Button from "./components/Button"
 
 const App = () => {
-
+  const users=['Trav','Tony','Robin','Cathy'];
   
   return (
     <div className='p-10 h-screen'>
-      <Card user='Shrey' />
-      <Card user='Rahul' />
-      <Card user='Pratyush' />
-      <Button text='Visit'/>
-      <Button text='Now'/>
+      {users.map(function(val){
+        return <Card user={val}/>
+      })}
 
  
       

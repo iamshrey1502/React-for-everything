@@ -11,3 +11,7 @@ const App = () => {
 }
 
 export default App
+
+//Tailwind CSS -> UI first framework (customizations available)
+//Bootstrap -> pre-built components (very less cusomizations available)
+
