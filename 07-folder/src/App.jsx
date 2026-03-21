@@ -1,14 +1,21 @@
 import React,{useState} from 'react'
 
 const App = () => {
+  const [username, setUsername] = useState("");
+  const [allusers, setAllusers] = useState([]);
+
   const submitHandler=(e)=>{
     e.preventDefault();
     // console.log("submitted");
-    console.log(username);
+    // console.log(username);
+    let newArray=[...allusers];
+    newArray.push(username);
+    console.log(newArray);
+    setAllusers(newArray);
     setUsername("");
   }
 
-  const [username, setUsername] = useState("");
+
   return (
     <div>
       <form onSubmit={(e)=>{
@@ -22,6 +29,9 @@ const App = () => {
         }}/>
         <button>Submit</button>
       </form>
+      {allusers.map(function(val,idx){
+        return <h1 key={idx}>{val}</h1>
+      })}
     </div>
   )
 }
