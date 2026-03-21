@@ -1,19 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const App = () => {
-
   const submitHandler=(e)=>{
     e.preventDefault();
-    console.log("submitted");
+    // console.log("submitted");
+    console.log(username);
+    setUsername("");
   }
+
+  const [username, setUsername] = useState("");
   return (
-    <div className='bg-black h-screen text-white p-10'>
-      {/* <h1 className='text-9xl text-bold text-emerald-600'>App</h1> */}
+    <div>
       <form onSubmit={(e)=>{
-        submitHandler(e)
-      }} className='h-[50%] w-[50%] bg-[#333] p-5'>
-        <input className='border-2 p-3 m-2' type="text" placeholder="Enter your name"/>
-        <button className='p-3 border-2'>Submit</button>
+        submitHandler(e);
+      }}>
+        <input type="text" placeholder='Enter your name' value={username} required
+        onChange={(e)=>{
+           setUsername(e.target.value);// In this case you are not directly interacting with DOM
+           //console.log(e.target.value);// you are aksing react to change the input for you
+
+        }}/>
+        <button>Submit</button>
       </form>
     </div>
   )
@@ -21,4 +28,4 @@ const App = () => {
 
 export default App
 
-//acion attribute inside form will come to our use in backend
+//Twoway binding -> this whole thing of not directly interacting with DOM, but through React is known as Two-way binding
