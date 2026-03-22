@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+}
+
+#main{
+  height: 50%;
+  width: 50vw;
+  background-color: #333;
+  border: 2px solid white;
+  padding: 20px;
+}
+form{
+  display: flex;
+  gap: 10px;
+}
+.input{
+  border: 2px solid black;
+  padding: 5px;
+}
+/* @import "tailwindcss"; */
+#button{
+  background-color:rgba(88, 88, 245, 0.724);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-weight: 900;
+  font-size: 20px;
+}
+#button:active{
+  scale: 0.9;
+}
+
+.Card{
+  background-color: lightseagreen;
+  height: 300px;
+  width: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.content{
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.Card img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.Card button{
+  background-color: red;
+  padding:10px;
+  border: none;
+  outline: none;
+  font-weight: 900;
+  border-radius: 10px;
+
+}
+.Card button:active{
+  scale: 0.90;
+}
