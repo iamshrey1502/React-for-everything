@@ -3,14 +3,32 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import {Routes,Route} from "react-router-dom"
+import Navbar from "./components/Navbar";
+import Men from "./pages/Men";
+import Women from "./pages/Women"
+import Courses from "./pages/Courses";
+import Anycourse from "./pages/Anycourse";
+import CourseDetail  from './pages/CourseDetail';
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
     <div >
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/products" element={<Products/>}/>
+        {/* Nested Routes */}
+        <Route path="/products/men" element={<Men/>}/>
+        <Route path="/products/women" element={<Women/>}/>
+        {/* Dynamic Routes */}
+        <Route path="/courses" element={<Courses/>}/>
+        <Route path="/courses/:id" element={<Anycourse/>}/>
+        <Route path="/courses/:id/coursedetail" element={<CourseDetail/>}/>
+        {/* Not Found page */}
+        <Route path="/*" element={<NotFound/>}/>
+
       </Routes>
     
     </div>
