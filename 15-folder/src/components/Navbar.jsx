@@ -1,10 +1,14 @@
 import React from 'react'
+import { useContext } from 'react'
+import { userDataContext } from '../context/UserContext';
 
 const Navbar = (props) => {
-    console.log(props.children);
+    const data=useContext(userDataContext);// another hook
+    // console.log(data);
+    
   return (
     <div className='w-full h-25 bg-emerald-500 p-2'>
-        Navbar {props.children[0]} {props.children[1]}
+        Navbar {data}
     </div>
   )
 }
